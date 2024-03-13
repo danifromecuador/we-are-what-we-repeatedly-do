@@ -1,12 +1,12 @@
-import { ToDoItems } from './components/ToDoItems'
-import { NewItem } from './components/NewItem'
+import { Items } from './components/Items'
+import { New } from './components/New'
 import '../todo/styles/ToDo.css'
 
-export const DailyToDoList = () => {
+export const ToDo = () => {
   return (
-    <div className="daily-todo-list">
-      <ToDoItems />
-      <NewItem />
+    <div className="to-do">
+      <Items />
+      <New />
     </div>
   )
 }
