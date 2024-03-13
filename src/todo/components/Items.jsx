@@ -1,11 +1,13 @@
 import { Item } from "./Item"
 import '../styles/Items.css'
 
-export const Items = () => {
+export const Items = ({ Array }) => {
+  console.log(Array);
   return (
     <ul className="to-do-items">
-      <Item Text={"hello mdf"} />
-      <Item Text={"hello soab"} />
+      {Array.map((e, i) => (
+        <Item key={i} ArrayElement={e}/>
+      ))}
     </ul>
   )
 }
