@@ -1,33 +1,30 @@
 import { useState, useEffect } from 'react'
+import alarmSound from '../assets/alarm.wav'
 import '../styles/Alarm.css'
 
 export const Alarm = () => {
   const [alarmState, setAlarmState] = useState("turn on alarm")
 
-
   const handleOnOffAlarmBtn = () => {
-    if (alarmState === "turn on alarm") {
-      setAlarmState("turn off alarm")
-      console.log("alarm is on")
-    }
-    else {
-      setAlarmState("turn on alarm")
-      console.log("alarm is off")
-    }
+    alarmState === "turn on alarm" ? setAlarmState("turn off alarm") : setAlarmState("turn on alarm")
   }
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const currentDate = new Date();
-      const minutes = currentDate.getMinutes();
-      const seconds = currentDate.getSeconds()
-      if (alarmState==="turn off alarm" && minutes % 1 === 0 && seconds % 5 === 0) {
-        console.log(`Alarm sound at ${minutes}:${seconds}`);
-      }
-    }, 1000);
+  const playAlarmSound = () => {
+    const audio = new Audio(alarmSound)
+    audio.play()
+  }
 
-    return () => clearInterval(intervalId);
-  }, [alarmState]);
+  useEffect(() => { // runs each time the alarmState changes
+    const intervalId = setInterval(() => { // runs each second
+      const currentDate = new Date()
+      const minutes = currentDate.getMinutes()
+      const seconds = currentDate.getSeconds()
+
+      if (alarmState === "turn off alarm" && minutes % 1 === 0 && seconds === 0) playAlarmSound()
+    }, 1000)
+
+    return () => clearInterval(intervalId)
+  }, [alarmState])
 
   return (
     <div className="alarm">
