@@ -1,6 +1,6 @@
-import { ToDoItems } from '../components/ToDoItems'
-import { NewItem } from '../components/NewItem'
-import '../styles/DailyToDoList.css'
+import { ToDoItems } from './components/ToDoItems'
+import { NewItem } from './components/NewItem'
+import '../todo/styles/ToDo.css'
 
 export const DailyToDoList = () => {
   return (

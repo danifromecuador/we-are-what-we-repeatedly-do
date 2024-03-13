@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import alarmSound from '../assets/alarm.wav'
-import '../styles/Alarm.css'
+import alarmSound from '../alarm/assets/alarm.wav'
+import '../alarm/styles/Alarm.css'
 
 export const Alarm = () => {
   const [alarmState, setAlarmState] = useState("turn on alarm")

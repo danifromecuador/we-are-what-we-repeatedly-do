@@ -1,5 +1,5 @@
-import { Alarm } from './pages/Alarm'
-import { DailyToDoList } from './pages/DailyToDoList'
+import { Alarm } from '../alarm/Alarm.jsx'
+import { DailyToDoList } from '../todo/ToDo.jsx'
 import './styles/App.css'
 
 export const App = () => {
