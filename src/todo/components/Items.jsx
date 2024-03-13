@@ -3,10 +3,9 @@ import '../styles/Items.css'
 
 export const Items = () => {
   return (
-    <div className="to-do-items">
-      <Item />
-      <Item />
-      <Item />
-    </div>
+    <ul className="to-do-items">
+      <Item Text={"hello mdf"} />
+      <Item Text={"hello soab"} />
+    </ul>
   )
 }

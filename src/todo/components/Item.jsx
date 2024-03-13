@@ -1,9 +1,16 @@
 import '../styles/Item.css'
 
-export const Item = () => {
+export const Item = ({ Text }) => {
+
   return (
-    <div className="item">
-      item 12
-    </div>
+    <li className='item'>
+      <input type="checkbox" />
+      <input
+        className='input-text'
+        type="text"
+        value={Text}
+      />
+      <input type="button" value="Del" />
+    </li>
   )
 }
