@@ -1,0 +1,22 @@
+.alarm {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.on-off-alarm-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.on-off-alarm-btn.on {
+  background-color: green;
+}
+
+.on-off-alarm-btn.off {
+  background-color: red;
+}
+
