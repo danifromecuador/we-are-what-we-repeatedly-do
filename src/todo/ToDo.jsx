@@ -15,11 +15,15 @@ export const ToDo = () => {
     }
   ])
 
+  const Data = (data) => {
+    console.log(`from App: ${data}`);
+  }
+
 
   return (
     <div className="to-do">
       <Items Array={array}/>
-      <New />
+      <New Data={Data}/>
     </div>
   )
 }
