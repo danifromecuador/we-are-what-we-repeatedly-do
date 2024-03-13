@@ -20,7 +20,7 @@ export const Alarm = () => {
       const minutes = currentDate.getMinutes()
       const seconds = currentDate.getSeconds()
 
-      if (alarmState === "turn off alarm" && minutes % 1 === 0 && seconds === 0) playAlarmSound()
+      if (alarmState === "turn off alarm" && minutes % 15 === 0 && seconds === 0) playAlarmSound()
     }, 1000)
 
     return () => clearInterval(intervalId)
