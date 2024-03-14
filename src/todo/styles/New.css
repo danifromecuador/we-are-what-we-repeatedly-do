@@ -1,12 +1,21 @@
 .new {
-  padding: 5px;
+  padding: 25px;
 }
 
 .input-text {
   width: 85%;
   border: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: white;
+}
+
+.input-text:focus {
+  outline: none;
 }
 
 .add-btn {
   width: 15%;
+  font-size: 1.5rem;
+  cursor: pointer;
 }

@@ -1,12 +1,12 @@
 .alarm {
   width: 150px;
-
-  /* border: 1px solid black; */
+  height: 50px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  font-size: 1.2rem;
 }
 
 .on-off-alarm-btn {

@@ -1,8 +1,23 @@
 .item {
   margin: 0 auto;
-  padding: 5px;
+  padding: 15px 20px 15px 30px;
   display: flex;
   justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.item .checkbox {
+  transform: scale(3);
+}
+
+.del-btn {
+  font-size: 1.5rem;
+  padding: 0 5px;
+}
+
+.item .checkbox,
+.item .del-btn {
+  cursor: pointer;
 }
 
 .item .input-text.true {

@@ -12,13 +12,17 @@ export const Item = ({ ArrayElement, CompleteThis, DeleteThis }) => {
     <li className='item'>
       <input
         type="checkbox"
+        className='checkbox'
         checked={ArrayElement.completed}
         onChange={() => handleCheckState(ArrayElement.index)}
       />
       <span className={`input-text ${ArrayElement.completed}`} >
         {ArrayElement.text}
       </span>
-      <button onClick={handleDelBtn} >
+      <button
+        className='del-btn'
+        onClick={handleDelBtn}
+      >
         Del
       </button>
     </li>
