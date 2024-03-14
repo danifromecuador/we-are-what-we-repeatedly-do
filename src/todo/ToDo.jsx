@@ -17,6 +17,7 @@ export const ToDo = () => {
 
   const Data = (data) => {
     console.log(`from App: ${data}`);
+    setArray([...array, {"completed":false, "text":data}])
   }
 
 
