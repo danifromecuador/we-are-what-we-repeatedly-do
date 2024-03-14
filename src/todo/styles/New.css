@@ -4,15 +4,7 @@
   justify-content: space-between;
 }
 
-.new .input-text {
-  border: 1px solid white;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-
 .input-text {
-  width: auto;
   border: none;
   font-size: 1.5rem;
   background-color: transparent;
@@ -21,11 +13,17 @@
   margin-right: 15px;
 }
 
+.new .input-text {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .input-text:focus {
   outline: none;
 }
 
-.add-btn {  
+.add-btn {
   width: 65px;
   max-width: 70px;
   font-size: 1.5rem;

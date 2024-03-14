@@ -1,5 +1,6 @@
 .item {
   margin: 0 auto;
+
   /* padding: 15px 15px 15px 25px; */
   margin: 12px 0 12px 13px;
   display: flex;
@@ -21,7 +22,7 @@
   cursor: pointer;
 }
 
-.item .input-text {  
+.item .input-text {
   margin: 0 15px 0 26px;
   border: 1px solid white;
   border-radius: 10px;
