@@ -10,6 +10,14 @@ export const ToDo = () => {
     if (data !== "") setArray([...array, { "index": array.length, "completed": false, "text": data }])
   }
 
+  const CompleteThis = (i) => {
+    if (array[i].completed === true) array[i].completed = false
+    else array[i].completed = true
+    setArray([...array])
+  }
+
+
+
   const DeleteThis = (item) => {
     array.splice(item, 1)
     for (let i = 0; i < array.length; i++) {
@@ -26,7 +34,7 @@ export const ToDo = () => {
 
   return (
     <div className="to-do">
-      <Items Array={array} Delete={DeleteThis} />
+      <Items Array={array} Completed={CompleteThis} Delete={DeleteThis} />
       <New Data={Data} />
     </div>
   )

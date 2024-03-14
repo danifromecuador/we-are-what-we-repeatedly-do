@@ -1,8 +1,12 @@
 import '../styles/Item.css'
 
-export const Item = ({ ArrayElement, DeleteThis }) => {
-  const handleCheckState = () => {
-    ArrayElement.completed = true
+export const Item = ({ ArrayElement, CompleteThis, DeleteThis }) => {
+  const handleCheckState = (i) => {
+    CompleteThis(i)
+  }
+
+  const handleEdit = () => {
+    console.log("edited");
   }
 
   const handleDelBtn = () => { // send an order to delete the element at index
@@ -13,19 +17,20 @@ export const Item = ({ ArrayElement, DeleteThis }) => {
     <li className='item'>
       <input
         type="checkbox"
-        defaultChecked={ArrayElement.completed}
-        onChange={handleCheckState}
+        checked={ArrayElement.completed}
+        onChange={()=>handleCheckState(ArrayElement.index)}
       />
       <input
         className='input-text'
         type="text"
-        Value={ArrayElement.text}
+        value={ArrayElement.text}
+        onChange={handleEdit}
       />
-      <input
-        type="button"
-        value="Del"
+      <button
         onClick={handleDelBtn}
-      />
+      >
+        Del
+      </button>
     </li>
   )
 }
