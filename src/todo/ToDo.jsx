@@ -11,12 +11,9 @@ export const ToDo = () => {
   }
 
   const CompleteThis = (i) => {
-    if (array[i].completed === true) array[i].completed = false
-    else array[i].completed = true
+    array[i].completed === true ? array[i].completed = false : array[i].completed = true
     setArray([...array])
   }
-
-
 
   const DeleteThis = (item) => {
     array.splice(item, 1)
@@ -26,11 +23,9 @@ export const ToDo = () => {
     setArray([...array])
   }
 
-  useEffect(()=>{    
+  useEffect(() => {
     localStorage.setItem("array", JSON.stringify(array));
   }, [array])
-
-
 
   return (
     <div className="to-do">

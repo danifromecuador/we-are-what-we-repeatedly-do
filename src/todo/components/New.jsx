@@ -1,23 +1,20 @@
 import { useState } from 'react'
 import '../styles/New.css'
 
-export const New = ({Data}) => {
+export const New = ({ Data }) => {
   const [input, setInput] = useState("")
 
-  const handleInput = (e) => {
-    setInput(e.target.value)
-  }
+  const handleInput = (e) => setInput(e.target.value)
 
   const handleEnterKey = (e) => {
-    if (e.key === "Enter") {
-      handleAddBtn()
-    }
+    if (e.key === "Enter") handleAddBtn()
   }
 
   const handleAddBtn = () => {
     Data(input)
     setInput("")
   }
+
   return (
     <div className="new">
       <input
@@ -25,7 +22,7 @@ export const New = ({Data}) => {
         type="text"
         placeholder='enter new goal'
         value={input}
-        onChange={(e)=>handleInput(e)}
+        onChange={(e) => handleInput(e)}
         onKeyDown={handleEnterKey}
       />
       <input

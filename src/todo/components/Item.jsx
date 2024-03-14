@@ -5,10 +5,6 @@ export const Item = ({ ArrayElement, CompleteThis, DeleteThis }) => {
     CompleteThis(i)
   }
 
-  const handleEdit = () => {
-    console.log("edited");
-  }
-
   const handleDelBtn = () => { // send an order to delete the element at index
     DeleteThis(ArrayElement.index)
   }
@@ -18,17 +14,12 @@ export const Item = ({ ArrayElement, CompleteThis, DeleteThis }) => {
       <input
         type="checkbox"
         checked={ArrayElement.completed}
-        onChange={()=>handleCheckState(ArrayElement.index)}
+        onChange={() => handleCheckState(ArrayElement.index)}
       />
-      <input
-        className='input-text'
-        type="text"
-        value={ArrayElement.text}
-        onChange={handleEdit}
-      />
-      <button
-        onClick={handleDelBtn}
-      >
+      <span className='input-text' >
+        {ArrayElement.text}
+      </span>
+      <button onClick={handleDelBtn} >
         Del
       </button>
     </li>
