@@ -8,8 +8,15 @@ export const New = ({Data}) => {
     setInput(e.target.value)
   }
 
+  const handleEnterKey = (e) => {
+    if (e.key === "Enter") {
+      handleAddBtn()
+    }
+  }
+
   const handleAddBtn = () => {
     Data(input)
+    setInput("")
   }
   return (
     <div className="new">
@@ -19,6 +26,7 @@ export const New = ({Data}) => {
         placeholder='enter new goal'
         value={input}
         onChange={(e)=>handleInput(e)}
+        onKeyDown={handleEnterKey}
       />
       <input
         className='add-btn'
