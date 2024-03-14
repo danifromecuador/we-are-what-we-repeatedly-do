@@ -4,3 +4,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+.item .input-text.true {
+  text-decoration: line-through;
+  color: gray;
+}

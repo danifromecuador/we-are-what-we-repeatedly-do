@@ -16,7 +16,7 @@ export const Item = ({ ArrayElement, CompleteThis, DeleteThis }) => {
         checked={ArrayElement.completed}
         onChange={() => handleCheckState(ArrayElement.index)}
       />
-      <span className='input-text' >
+      <span className={`input-text ${ArrayElement.completed}`} >
         {ArrayElement.text}
       </span>
       <button onClick={handleDelBtn} >
