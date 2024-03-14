@@ -29,6 +29,7 @@ export const ToDo = () => {
 
   return (
     <div className="to-do">
+      <h1>Today&apos;s Goals</h1>
       <Items Array={array} Completed={CompleteThis} Delete={DeleteThis} />
       <New Data={Data} />
     </div>

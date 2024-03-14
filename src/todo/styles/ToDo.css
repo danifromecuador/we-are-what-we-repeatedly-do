@@ -1,5 +1,10 @@
 .to-do {
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 10px;
-  margin: 10px 0;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.to-do h1 {
+  text-align: center;
 }
