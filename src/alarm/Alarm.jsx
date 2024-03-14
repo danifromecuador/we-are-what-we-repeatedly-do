@@ -3,7 +3,7 @@ import alarmSound from '../alarm/assets/alarm.wav'
 import '../alarm/styles/Alarm.css'
 
 export const Alarm = () => {
-  const [alarmState, setAlarmState] = useState("turn on alarm")
+  const [alarmState, setAlarmState] = useState("turn off alarm")
 
   const handleOnOffAlarmBtn = () => {
     alarmState === "turn on alarm" ? setAlarmState("turn off alarm") : setAlarmState("turn on alarm")
