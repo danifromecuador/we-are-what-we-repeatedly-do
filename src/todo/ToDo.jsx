@@ -4,7 +4,7 @@ import { New } from './components/New'
 import '../todo/styles/ToDo.css'
 
 export const ToDo = () => {
-  const [array, setArray] = useState([])
+  const [array, setArray] = useState(JSON.parse(localStorage.getItem("array")) || [])
 
   const Data = (data) => {
     if (data !== "") setArray([...array, { "index": array.length, "completed": false, "text": data }])
@@ -26,8 +26,8 @@ export const ToDo = () => {
     setArray([...array])
   }
 
-  useEffect(()=>{
-    console.log(array);
+  useEffect(()=>{    
+    localStorage.setItem("array", JSON.stringify(array));
   }, [array])
 
 
