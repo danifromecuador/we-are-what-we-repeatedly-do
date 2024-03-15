@@ -6,23 +6,40 @@ import '../todo/styles/ToDo.css'
 export const ToDo = () => {
   const [array, setArray] = useState(JSON.parse(localStorage.getItem("array")) || [])
 
+  // create a new goal with the New.jsx component
   const Data = (data) => {
     if (data !== "") setArray([...array, { "index": array.length, "completed": false, "text": data }])
   }
 
-  const CompleteThis = (i) => {
-    array[i].completed === true ? array[i].completed = false : array[i].completed = true
-    setArray([...array])
-  }
-
-  const DeleteThis = (item) => {
-    array.splice(item, 1)
+  const sortArray = () => {
     for (let i = 0; i < array.length; i++) {
       array[i].index = i
+    }
+  }
+
+  const CompleteThis = (i) => {
+    if (array[i].completed === true) {
+      array[i].completed = false
+      array.unshift(array[i])
+      array.splice(i + 1, 1)
+      sortArray()
+    }
+    else {
+      array[i].completed = true
+      array.push(array[i])
+      array.splice(i, 1)
+      sortArray()
     }
     setArray([...array])
   }
 
+  const DeleteThis = (i) => {
+    array.splice(i, 1)
+    sortArray()
+    setArray([...array])
+  }
+
+  // saves on local storage when the array changes
   useEffect(() => {
     localStorage.setItem("array", JSON.stringify(array));
   }, [array])
