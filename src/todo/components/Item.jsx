@@ -10,13 +10,10 @@ export const Item = ({ ArrayElement, CompleteThis, DeleteThis }) => {
 
   return (
     <li className='item'>
-      <input
-        type="checkbox"
-        className='checkbox'
-        checked={ArrayElement.completed}
-        onChange={() => handleCheckState(ArrayElement.index)}
-      />
-      <span className={`input-text ${ArrayElement.completed}`} >
+      <span
+        className={`input-text ${ArrayElement.completed}`}
+        onClick={() => handleCheckState(ArrayElement.index)}
+      >
         {ArrayElement.text}
       </span>
       <button
