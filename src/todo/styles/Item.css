@@ -1,27 +1,21 @@
 .item {
-  margin: 0 auto;
-  margin: 12px 0 12px 13px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   font-size: 1.5rem;
 }
 
-.del-btn {
+.item .del-btn {
   font-size: 1.5rem;
   width: 70px;
-}
-
-.item .del-btn {
   cursor: pointer;
 }
 
 .item .input-text {
-  margin: 0 15px 0 26px;
   border: 1px solid white;
   border-radius: 10px;
   width: 100%;
   padding: 10px;
+  color: white;
 }
 
 .item .input-text.true {
