@@ -1,15 +1,10 @@
 .item {
   margin: 0 auto;
-
-  /* padding: 15px 15px 15px 25px; */
   margin: 12px 0 12px 13px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   font-size: 1.5rem;
-}
-
-.item .checkbox {
-  transform: scale(3);
 }
 
 .del-btn {
@@ -17,7 +12,6 @@
   width: 70px;
 }
 
-.item .checkbox,
 .item .del-btn {
   cursor: pointer;
 }
