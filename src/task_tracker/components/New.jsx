@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react"
 
-export const New = ({Data}) => {
+export const New = ({ Data }) => {
+  const [pastDate, setPastDate] = useState("null")
   const [input, setInput] = useState("")
   const [completedTask, setCompletedTask] = useState([])
-  const [pastDate, setPastDate] = useState("null")
 
   const handleInput = (e) => setInput(e.target.value)
 
   const handleCompletedTaskAddBtn = () => {
-    if (input !== "") setCompletedTask([...completedTask, { "time_range": pastDate, "text": input }])
-    setInput("")
-    Data(completedTask)
+    if (input !== "") {
+      const updatedTask = { "time_range": pastDate, "text": input };
+      setCompletedTask([...completedTask, updatedTask]);
+      Data([...completedTask, updatedTask]);
+    }
+    setInput("");
   }
 
   const handleEnterKey = (e) => {
@@ -38,7 +41,6 @@ export const New = ({Data}) => {
   }, [])
 
   useEffect(() => {
-    // console.log(completedTask);
   }, [completedTask])
 
   return (
