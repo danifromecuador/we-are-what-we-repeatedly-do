@@ -16,7 +16,7 @@ export const Items = ({ Array, Completed, Delete }) => {
 }
 
 Items.propTypes = {
-  Array: PropTypes.array.isRequired.any,
-  Completed: PropTypes.func.isRequired.any,
-  Delete: PropTypes.func.isRequired.any,
+  Array: PropTypes.array.isRequired,
+  Completed: PropTypes.func.isRequired,
+  Delete: PropTypes.func.isRequired,
 };
