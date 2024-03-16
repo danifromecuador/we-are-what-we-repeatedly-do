@@ -1,7 +1,10 @@
-export const Tasks = () => {
+export const Tasks = ({Array}) => {
+
   return (
     <div className="tasks">
-      show an array of tasks with time and name
+      { Array.map((e, i)=>(
+        <li key={i}>{e.time_range}  ..........  {e.text}</li>
+      ))}
     </div>
   )
 }
