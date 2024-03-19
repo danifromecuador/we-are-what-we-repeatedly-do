@@ -1,0 +1,21 @@
+.task-tracker .tasks {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.task-tracker li {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  font-size: 1.2rem;
+}
+
+.task-tracker li .tasks-left {
+  min-width: 120px;
+}
+
+.task-tracker li .tasks-right {
+  width: 100%;
+  text-align: left;
+}

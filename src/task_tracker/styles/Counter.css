@@ -1,0 +1,17 @@
+.task-tracker .counter {
+  display: flex;
+  align-items: center;
+}
+
+.task-tracker .counter .hours-counter {
+  width: fit-content;
+  height: 50px;
+  margin: 0 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}

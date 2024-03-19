@@ -37,5 +37,5 @@ export const New = ({ Data }) => {
 }
 
 New.propTypes = {
-  Data: PropTypes.oneOf([PropTypes.number, PropTypes.string]).isRequired,
+  Data: PropTypes.func.isRequired,
 }

@@ -27,7 +27,7 @@ export const Item = ({ ArrayElement, CompleteThis, DeleteThis }) => {
 }
 
 Item.propTypes = {
-  ArrayElement: PropTypes.object.isRequired.any,
-  CompleteThis: PropTypes.func.isRequired.any,
-  DeleteThis: PropTypes.func.isRequired.any,
+  ArrayElement: PropTypes.object.isRequired,
+  CompleteThis: PropTypes.func.isRequired,
+  DeleteThis: PropTypes.func.isRequired,
 };
