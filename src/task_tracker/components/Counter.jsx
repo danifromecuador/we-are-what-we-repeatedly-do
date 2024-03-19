@@ -1,7 +1,7 @@
-export const Counter = () => {
+export const Counter = ({Array}) => {
   return (
     <div className="counter">
-      day:3h Week:12h Month:104h Year:1000h
+      For today, you've worked <b>{Array.length / 4}</b> hours. Continue with the great work!
     </div>
   )
 }
