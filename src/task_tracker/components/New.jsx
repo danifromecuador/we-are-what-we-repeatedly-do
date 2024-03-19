@@ -21,7 +21,7 @@ export const New = ({ Data }) => {
     let pastDateString = "none"
     const currentDate = new Date()
     const hours = currentDate.getHours()
-    const minutes = currentDate.getSeconds()
+    const minutes = currentDate.getMinutes()
     if (minutes >= 0 && minutes < 15) pastDateString = `${hours - 1}:45 - ${hours}:00`
     if (minutes >= 15 && minutes < 30) pastDateString = `${hours}:00 - ${hours}:15`
     if (minutes >= 30 && minutes < 45) pastDateString = `${hours}:15 - ${hours}:30`
