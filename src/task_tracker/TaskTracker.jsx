@@ -12,7 +12,7 @@ export const TaskTracker = () => {
     if (array.length > 0) {
       if (array[array.length - 1].time_range !== task.time_range) setArray([...array, task])
       else { // show a wait message for 3 seconds
-        setWaitMessage("please wait until new time range")
+        setWaitMessage("please wait until new time range!")
         setTimeout(() => {
           setWaitMessage("")
         }, 3000)

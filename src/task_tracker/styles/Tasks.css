@@ -12,10 +12,10 @@
 }
 
 .task-tracker li .tasks-left {
-  width: 21%;
+  min-width: 120px;
 }
 
 .task-tracker li .tasks-right {
-  width: 79%;
+  width: 100%;
   text-align: left;
 }
