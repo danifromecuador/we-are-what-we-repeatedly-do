@@ -4,7 +4,7 @@ import { New } from './components/New'
 import '../todo/styles/ToDo.css'
 
 export const ToDo = () => {
-  const [array, setArray] = useState(JSON.parse(localStorage.getItem("array")) || [])
+  const [array, setArray] = useState(JSON.parse(localStorage.getItem("goals-list")) || [])
 
   // create a new goal with the New.jsx component
   const Data = (data) => {
@@ -41,7 +41,7 @@ export const ToDo = () => {
 
   // saves on local storage when the array changes
   useEffect(() => {
-    localStorage.setItem("array", JSON.stringify(array));
+    localStorage.setItem("goals-list", JSON.stringify(array));
   }, [array])
 
   return (
