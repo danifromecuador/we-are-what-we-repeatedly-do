@@ -1,18 +1,13 @@
 import { useState, useEffect } from "react"
 
 export const New = ({ Data }) => {
-  const [pastDate, setPastDate] = useState("null")
+  const [pastDate, setPastDate] = useState("loading...")
   const [input, setInput] = useState("")
-  const [completedTask, setCompletedTask] = useState([])
 
   const handleInput = (e) => setInput(e.target.value)
 
   const handleCompletedTaskAddBtn = () => {
-    if (input !== "") {
-      const updatedTask = { "time_range": pastDate, "text": input };
-      setCompletedTask([...completedTask, updatedTask]);
-      Data([...completedTask, updatedTask]);
-    }
+    if (input !== "") Data({ "time_range": pastDate, "text": input });
     setInput("");
   }
 
@@ -39,9 +34,6 @@ export const New = ({ Data }) => {
 
     return () => clearInterval(intervalId)
   }, [])
-
-  useEffect(() => {
-  }, [completedTask])
 
   return (
     <div className="new">
