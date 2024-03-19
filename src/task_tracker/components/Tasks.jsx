@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import '../styles/Tasks.css'
 
 export const Tasks = ({ Array }) => {
@@ -13,3 +14,7 @@ export const Tasks = ({ Array }) => {
     </ul>
   )
 }
+
+Tasks.propTypes = {
+  Array: PropTypes.array.isRequired,
+};

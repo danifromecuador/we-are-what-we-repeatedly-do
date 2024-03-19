@@ -1,4 +1,4 @@
-.task-tracker  .new {
+.task-tracker .new {
   border-radius: 10px;
 }
 
@@ -21,17 +21,8 @@
   outline: none;
 }
 
-
-
-
-
-
-
-
-
 .task-tracker .new .add-completed-task-btn {
   width: 65px;
   font-size: 1.5rem;
   cursor: pointer;
-
 }

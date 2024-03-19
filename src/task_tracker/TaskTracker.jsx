@@ -36,7 +36,7 @@ export const TaskTracker = () => {
         className='delete-completed-tasks-btn'
         onClick={deleteArray}
       >
-        Reset Today's Progress
+        Reset Today&apos;s Progress
       </button>
       <div className="wait-message">{waitMessage}</div>
       <New Data={getData} />

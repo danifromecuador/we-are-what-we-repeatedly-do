@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import PropTypes from 'prop-types'
 import '../styles/New.css'
 
 export const New = ({ Data }) => {
@@ -60,3 +61,7 @@ export const New = ({ Data }) => {
     </div>
   )
 }
+
+New.propTypes = {
+  Data: PropTypes.func.isRequired,
+};
