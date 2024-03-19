@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Counter } from './components/Counter.jsx'
 import { Tasks } from './components/Tasks.jsx'
 import { New } from './components/New.jsx'
+import './styles/TaskTracker.css'
 
 export const TaskTracker = () => {
   const [array, setArray] = useState(JSON.parse(localStorage.getItem("completed-tasks-list")) || [])
@@ -31,7 +32,12 @@ export const TaskTracker = () => {
     <div className="task-tracker">
       <Counter Array={array} />
       <Tasks Array={array} />
-      <button onClick={deleteArray}>Delete Today's Progress</button>
+      <button
+        className='delete-completed-tasks-btn'
+        onClick={deleteArray}
+      >
+        Reset Today's Progress
+      </button>
       <div className="wait-message">{waitMessage}</div>
       <New Data={getData} />
     </div>

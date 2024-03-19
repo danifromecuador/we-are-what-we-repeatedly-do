@@ -1,10 +1,15 @@
-export const Tasks = ({Array}) => {
+import '../styles/Tasks.css'
+
+export const Tasks = ({ Array }) => {
 
   return (
-    <div className="tasks">
-      { Array.map((e, i)=>(
-        <li key={i}>{e.time_range}  ..........  {e.text}</li>
+    <ul className="tasks">
+      {Array.map((e, i) => (
+        <li key={i}>
+          <div className='tasks-left'>{e.time_range}</div>
+          <div className='tasks-right'>{e.text}</div>
+        </li>
       ))}
-    </div>
+    </ul>
   )
 }

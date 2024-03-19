@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import '../styles/New.css'
 
 export const New = ({ Data }) => {
   const [pastDate, setPastDate] = useState("loading...")
@@ -37,16 +38,18 @@ export const New = ({ Data }) => {
 
   return (
     <div className="new">
-      <div className="current-block">
-        {pastDate}
+      <div className="current-block-input-text">
+        <div className="current-block">
+          {pastDate}
+        </div>
+        <input
+          type="text"
+          placeholder="enter completed task"
+          value={input}
+          onChange={(e) => handleInput(e)}
+          onKeyDown={handleEnterKey}
+        />
       </div>
-      <input
-        type="text"
-        placeholder="enter completed task"
-        value={input}
-        onChange={(e) => handleInput(e)}
-        onKeyDown={handleEnterKey}
-      />
       <button
         type="button"
         className="add-completed-task-btn"

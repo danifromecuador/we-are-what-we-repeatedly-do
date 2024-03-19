@@ -1,7 +1,12 @@
-export const Counter = ({Array}) => {
+import '../styles/Counter.css'
+
+export const Counter = ({ Array }) => {
   return (
     <div className="counter">
-      For today, you've worked <b>{Array.length / 4}</b> hours. Continue with the great work!
+      <div>Total worked hours:</div>
+      <div className='hours-counter'>
+        {Array.length / 4}
+      </div>
     </div>
   )
 }

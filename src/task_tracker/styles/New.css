@@ -1,0 +1,37 @@
+.task-tracker  .new {
+  border-radius: 10px;
+}
+
+.task-tracker .new .current-block-input-text {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  margin-right: 10px;
+  display: flex;
+}
+
+.task-tracker .new .current-block-input-text input {
+  margin-left: 10px;
+  border: none;
+  width: 74%;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+.task-tracker .new .add-completed-task-btn {
+  width: 65px;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+}
