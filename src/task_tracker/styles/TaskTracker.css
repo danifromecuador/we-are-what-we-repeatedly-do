@@ -13,14 +13,12 @@
 .task-tracker h1 {
   text-align: center;
   font-size: 2rem;
-  
 }
 
 .task-tracker .delete-completed-tasks-btn {
   font-size: 1.2rem;
   padding: 10px;
   cursor: pointer;
-
 }
 
 .task-tracker .wait-message {

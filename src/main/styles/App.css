@@ -21,6 +21,7 @@
   .app {
     row-gap: 40px;
   }
+
   .app .left-right {
     flex-direction: column;
     row-gap: 40px;

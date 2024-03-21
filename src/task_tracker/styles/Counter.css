@@ -1,6 +1,6 @@
 .task-tracker .counter {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: flex-end;
   font-size: 1.5rem;
 }
