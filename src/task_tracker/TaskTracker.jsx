@@ -28,8 +28,11 @@ export const TaskTracker = () => {
     localStorage.setItem("completed-tasks-list", JSON.stringify(array))
   }, [array])
 
+  let waitMessageHide = waitMessage==="" ? "hide" : ""
+
   return (
     <div className="task-tracker">
+      <h1>Task Tracker</h1>
       <Counter Array={array} />
       <Tasks Array={array} />
       <button
@@ -38,7 +41,7 @@ export const TaskTracker = () => {
       >
         Reset Today&apos;s Progress
       </button>
-      <div className="wait-message">{waitMessage}</div>
+      <div className={`wait-message ${waitMessageHide}`}>{waitMessage}</div>
       <New Data={getData} />
     </div>
   )

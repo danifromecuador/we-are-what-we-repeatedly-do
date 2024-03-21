@@ -6,12 +6,14 @@ import './styles/App.css'
 export const App = () => {
   return (
     <div className="app">
-      <div className="left">
-        <Alarm />
-        <ToDo />
-      </div>
-      <div className="right">
-        <TaskTracker />
+      <Alarm />
+      <div className="left-right">
+        <div className="left">
+          <ToDo />
+        </div>
+        <div className="right">
+          <TaskTracker />
+        </div>
       </div>
     </div>
 

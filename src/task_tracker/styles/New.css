@@ -3,30 +3,63 @@
 }
 
 .task-tracker .new .current-block {
-  min-width: 150px;
+  width: 130px;
 }
 
 .task-tracker .new .current-block-input-text {
-  border: 1px solid white;
+  border: 1px solid gray;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   width: 100%;
   margin-right: 10px;
   display: flex;
+  font-size: 1.2rem;
 }
 
 .task-tracker .new .current-block-input-text input {
-  margin-left: 10px;
   border: none;
-  width: 74%;
+  width: 70%;
   background-color: transparent;
   color: white;
-  font-size: 20px;
+  font-size: 1.2rem;
   outline: none;
 }
 
 .task-tracker .new .add-completed-task-btn {
   width: 65px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
+}
+
+@media (width < 1000px) {
+  .task-tracker .new .current-block-input-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .task-tracker .new .current-block-input-text input {
+    width: 100%;
+  }
+}
+
+@media (width < 768px) {
+  .task-tracker .new .current-block-input-text {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .task-tracker .new .current-block-input-text input {
+    width: 70%;
+  }
+}
+
+@media (width < 500px) {
+  .task-tracker .new .current-block-input-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .task-tracker .new .current-block-input-text input {
+    width: 100%;
+  }
 }

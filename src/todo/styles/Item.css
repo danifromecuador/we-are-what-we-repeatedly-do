@@ -1,17 +1,16 @@
 .item {
   display: flex;
   justify-content: space-between;
-  font-size: 1.5rem;
 }
 
 .item .del-btn {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   width: 70px;
   cursor: pointer;
 }
 
 .item .input-text {
-  border: 1px solid white;
+  border: 1px solid gray;
   border-radius: 10px;
   width: 100%;
   padding: 10px;
