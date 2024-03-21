@@ -30,3 +30,36 @@
   font-size: 1.2rem;
   cursor: pointer;
 }
+
+@media (width < 1000px) {
+  .task-tracker .new .current-block-input-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .task-tracker .new .current-block-input-text input {
+    width: 100%;  
+  }
+}
+
+@media (width < 768px) {
+  .task-tracker .new .current-block-input-text {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  .task-tracker .new .current-block-input-text input {
+    width: 70%;  
+  }
+}
+
+@media (width < 500px) {
+  .task-tracker .new .current-block-input-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .task-tracker .new .current-block-input-text input {
+    width: 100%;  
+  }
+}
+```

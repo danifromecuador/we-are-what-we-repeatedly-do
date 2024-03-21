@@ -32,6 +32,7 @@ export const TaskTracker = () => {
 
   return (
     <div className="task-tracker">
+      <h1>Task Tracker</h1>
       <Counter Array={array} />
       <Tasks Array={array} />
       <button
