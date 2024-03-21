@@ -1,7 +1,13 @@
 .task-tracker .tasks {
-  width: 90%;
-  margin: 0 auto;
-  padding-bottom: 20px;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.task-tracker .tasks.hide {
+  display: none;
 }
 
 .task-tracker li {

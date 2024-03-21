@@ -6,7 +6,7 @@
 
 .input-text {
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background-color: transparent;
   color: gray;
   width: 100%;
@@ -26,6 +26,6 @@
 
 .add-btn {
   width: 70px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }

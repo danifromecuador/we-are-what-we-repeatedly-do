@@ -3,7 +3,7 @@
   border: 1px solid white;
   border-radius: 10px;
   padding: 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .task-tracker ul,
@@ -12,11 +12,17 @@
 }
 
 .task-tracker .delete-completed-tasks-btn {
-  font-size: 1.5rem;
-  padding: 0 10px;
+  font-size: 1.2rem;
+  padding: 10px;
   cursor: pointer;
+
 }
 
 .task-tracker .wait-message {
   padding-top: 20px;
+  color: red;
+}
+
+.task-tracker .wait-message.hide {
+  display: none;
 }

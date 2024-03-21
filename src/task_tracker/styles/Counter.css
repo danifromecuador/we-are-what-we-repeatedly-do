@@ -1,6 +1,7 @@
 .task-tracker .counter {
   display: flex;
   align-items: center;
+  font-size: 1.5rem;
 }
 
 .task-tracker .counter .hours-counter {
