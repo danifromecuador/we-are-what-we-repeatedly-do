@@ -3,9 +3,26 @@
   height: 100vh;
   padding: 20px;
   display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
-.left,
-.right {
-  width: 50%;
+.app .left-right {
+  display: flex;
+  column-gap: 20px;
+}
+
+.app .left-right .left,
+.app .left-right .right {
+  flex: 1;
+}
+
+@media (width < 768px) {
+  .app {
+    row-gap: 40px;
+  }
+  .app .left-right {
+    flex-direction: column;
+    row-gap: 40px;
+  }
 }
