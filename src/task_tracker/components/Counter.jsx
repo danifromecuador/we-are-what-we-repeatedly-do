@@ -6,6 +6,18 @@ export const Counter = ({ Array }) => {
     <div className="counter">
       <div>Total worked hours:</div>
       <div className='hours-counter'>{Array.length / 4}</div>
+      <div className="day-counter">
+        Day
+      </div>
+      <div className="week-counter">
+        Week
+      </div>
+      <div className="month-counter">
+        Mounth
+      </div>
+      <div className="year-counter">
+        Year
+      </div>
     </div>
   )
 }
